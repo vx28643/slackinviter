@@ -210,22 +210,7 @@ func handleInvite(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Missing email", http.StatusPreconditionFailed)
 		return
 	}
-	if fname == "" {
-		missingFirstName.Add(1)
-		http.Error(w, "Missing first name", http.StatusPreconditionFailed)
-		return
-	}
-	if lname == "" {
-		missingLastName.Add(1)
-		http.Error(w, "Missing last name", http.StatusPreconditionFailed)
-		return
-	}
-	if coc != "1" {
-		missingCoC.Add(1)
-		http.Error(w, "You need to accept the code of conduct", http.StatusPreconditionFailed)
-		return
-	}
-	err = api.InviteToTeam("Gophers", fname, lname, email)
+	err = api.InviteToTeam("emercoinhq", fname, lname, email)
 	if err != nil {
 		log.Println("InviteToTeam error:", err)
 		inviteErrors.Add(1)
