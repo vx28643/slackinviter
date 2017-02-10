@@ -204,7 +204,7 @@ func handleInvite(w http.ResponseWriter, r *http.Request) {
 	fname := r.FormValue("fname")
 	lname := r.FormValue("lname")
 	email := r.FormValue("email")
-	coc := r.FormValue("coc")
+
 	if email == "" {
 		missingEmail.Add(1)
 		http.Error(w, "Missing email", http.StatusPreconditionFailed)
