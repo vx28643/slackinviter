@@ -14,6 +14,14 @@
         <p>Join <b>{{.Team.Name}}</b> on Slack.</p>
         <p class="status"><b class="active">{{.ActiveCount}}</b> users online now of
         <b class="total">{{.UserCount}}</b> registered.</p>
+        <p>
+        
+Due to excessive spam, joining the slack is now a manual process.
+<br><br>
+To receive an invitation send a PM to user <a href="https://bitcointalk.org/index.php?action=pm;sa=send;u=1186796">emerbot</a> on Bitcointalk.org with your email address. Only non-spam accounts will be accepted. 
+        
+        </p>
+        <fieldset disabled="disabled">
         <form>
             <input autofocus="true" class="form-item" name="email" placeholder=
             "you@yourdomain.com" type="email"><input autofocus="true" class=
@@ -24,11 +32,12 @@
             <div class="g-recaptcha" data-sitekey="{{.SiteKey}}"></div>
             <button class="loading">Get my Invite</button>
         </form>
+        </fieldset>
         <p class="signin">or <a href="https://{{.Team.Domain}}.slack.com" target=
         "_top">sign in</a>.</p>
         <footer>
             powered by <a href="http://github.com/flexd/slackinviter" target=
-            "_blank">slackinviter... totally ripping off the slackin css :-)</a>
+            "_blank">slackinviter</a>
         </footer>
         <style>
         .splash{width:300px;margin:200px auto;text-align:center;font-family:"Helvetica Neue", Helvetica, Arial}@media (max-width: 500px) {
